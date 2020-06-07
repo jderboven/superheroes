@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <span>Heroes</span>
+</mat-toolbar>
+
+<div class="container">
+  <div class="card" *ngFor="let hero of (heroes$ | async)" (click)="goToHero(hero.name)">
+    <img class="avatar" loading="lazy" [src]="hero.image?.url" (error)="printError()"/>
+    <h1>{{hero.name}}</h1>
+  </div>
+  <div class="card card-add" (click)="addNewHero()">
+    <h1 class="plus">&#43;</h1>
+  </div>
+</div>

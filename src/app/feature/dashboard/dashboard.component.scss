@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: center;
+
+  .card {
+      width: 250px;
+      height: 150px;
+      background: white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 10px;
+      margin: 10px 20px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ebedf2;
+      &:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+      }
+      &-add {
+        cursor: pointer;
+        .plus {
+            font-size: 100px;
+            color: rgb(255, 255, 255);
+        }
+      }
+
+      .avatar {
+        border-radius: 100%;
+        padding: 5px;
+        width: 80px;
+        height: 80px;
+      }
+  }
+}

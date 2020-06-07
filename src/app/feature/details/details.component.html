@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <span>Hero detail</span>
+</mat-toolbar>
+
+<div class="container" *ngIf="hero$ | async as hero">
+  <div class="card">
+    <h1>{{ hero.name }}</h1>
+    <img class="avatar" [src]="hero.image.url" />
+
+    <div *ngFor="let stat of hero.powerstats | keyvalue" class="abilities">
+      <span class="stat-name">{{ stat.key }}</span>
+      <div class="powerbar">
+        <div class="stat-value"
+          powerbar
+          [powerBarColor]="'#2196F3'"
+          [powerBarWidth]="stat.value">
+            {{ stat.value }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
